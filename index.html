@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tienda en linea</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>¡Bienvenido a nuestra tienda!</h1>
+  <h2>Disponible en BMW <img src="img/free-bmw-2849931-2370665.webp" height="25" width="25"></h2>
+  <div id="productos-bmw" class="productos">
+    <div class="producto">
+      <img src="img/producto1.jpg" width="300" height="200" alt="bmw gs 1200">
+      <h3>BMW gs 1200</h3>
+      <p>Precio: U$S 35.900,00</p>
+      <button onclick="agregarAlCarrito('bmw gs 1200', 35900.00)">Agregar</button>
+      <button class="boton-info">Ver más</button>
+      <div class="info-adicional" style="display: none;">
+        <!-- Contenido adicional del producto -->
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Detalles: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="producto">
+      <img src="img/producto2.jpg" width="300" height="200" alt="bmw s1000rr">
+      <h3>BMW s1000rr</h3>
+      <p>Precio: U$S 59.500,00</p>
+      <button onclick="agregarAlCarrito('bmw s1000rr', 59500.00)">Agregar</button>
+      <button class="boton-info">Ver más</button>
+      <div class="info-adicional" style="display: none;">
+        <!-- Contenido adicional del producto -->
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Detalles: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="producto">
+      <img src="img/producto3.jpg" width="300" height="200" alt="bmw g310r">
+      <h3>BMW g310r</h3>
+      <p>Precio: U$S 7.000,00</p>
+      <button onclick="agregarAlCarrito('bmw s1000rr', 7000.00)">Agregar</button>
+      <button class="boton-info">Ver más</button>
+      <div class="info-adicional" style="display: none;">
+        <!-- Contenido adicional del producto -->
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Detalles: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+  <h2>Disponible en Yamaha <img src="img/yamaha.png" height="25" width="25"></h2>
+  <div id="productos-yamaha" class="productos">
+    <div class="producto">
+      <img src="img/producto4.webp" width="300" height="200" alt="yamaha r1">
+      <h3>Yamaha R1</h3>
+      <p>Precio: U$S 37.800,00</p>
+      <button onclick="agregarAlCarrito('Yamaha R1', 37800.00)">Agregar</button>
+      <button class="boton-info">Ver más</button>
+      <div class="info-adicional" style="display: none;">
+        <!-- Contenido adicional del producto -->
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Detalles: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="producto">
+      <img src="img/producto5.webp" width="300" height="200" alt="yamaha mt 03">
+      <h3>Yamaha mt 03</h3>
+      <p>Precio: U$S 6.100,00</p>
+      <button onclick="agregarAlCarrito('yamaha mt 03', 6100.00)">Agregar</button>
+      <button class="boton-info">Ver más</button>
+      <div class="info-adicional" style="display: none;">
+        <!-- Contenido adicional del producto -->
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Detalles: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="producto">
+      <img src="img/producto6.jpg" width="300" height="200" alt="yamaha ybr 125">
+      <h3>Yamaha ybr 125</h3>
+      <p>Precio: U$S 2.500,00</p>
+      <button onclick="agregarAlCarrito('Yamaha ybr 125', 2500.00)">Agregar</button>
+      <button class="boton-info">Ver más</button>
+      <div class="info-adicional" style="display: none;">
+        <!-- Contenido adicional del producto -->
+        <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Detalles: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+  <div id="carrito">
+    <h2>Carrito de compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total"></span></p>
+    <button onclick="realizarCompra()">Realizar compra</button>
+  </div>
+  <div id="comprobante" style="display: none;">
+    <h2>Comprobante de pago</h2>
+    <p id="numero-orden"></p>
+    <p id="total-pago"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
