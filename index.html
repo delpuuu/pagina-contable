@@ -3,7 +3,6 @@
 <head>
   <title>Tienda en linea</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
   <h1>¡Bienvenido a nuestra tienda!</h1>
@@ -95,7 +94,11 @@
     <h2>Comprobante de pago</h2>
     <p id="numero-orden"></p>
     <p id="total-pago"></p>
+    <button id="pagar">Pagar</button>
+    <button id="descargar-pdf">Descargar PDF</button>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

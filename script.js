@@ -37,18 +37,6 @@ function generarNumeroOrden() {
   return Math.floor(Math.random() * 1000000) + 1;
 }
 
-function generarPDF(numeroOrden, totalPago) {
-  var doc = new jsPDF();
-
-  doc.setFontSize(20);
-  doc.text("Comprobante de pago", 10, 10);
-
-  doc.setFontSize(12);
-  doc.text("Número de orden: " + numeroOrden, 10, 20);
-  doc.text("Total pagado: $" + totalPago, 10, 30);
-  doc.save("comprobante_pago.pdf");
-}
-
 // Seleccionar todos los botones de información
 var botonesInfo = document.querySelectorAll(".boton-info");
 
@@ -71,3 +59,25 @@ botonesInfo.forEach(function(boton) {
     }
   });
 });
+
+// Obtén una referencia al botón "Descargar PDF"
+const descargarPdfBtn = document.getElementById('descargar-pdf');
+
+// Asigna un controlador de eventos para el clic del botón
+descargarPdfBtn.addEventListener('click', () => {
+  // Crea un objeto jsPDF
+  const doc = new jspdf.jsPDF();
+
+  // Obtiene los valores del comprobante de pago
+  const numeroOrden = document.getElementById('numero-orden').textContent;
+  const totalPago = document.getElementById('total-pago').textContent;
+
+  // Agrega el contenido al PDF
+  doc.text('Comprobante de pago', 10, 10);
+  doc.text(numeroOrden, 10, 20);
+  doc.text(totalPago, 10, 30);
+
+  // Descarga el archivo PDF
+  doc.save('comprobante_pago.pdf');
+});
+
